@@ -140,8 +140,7 @@ export const GameBoard = () => {
           return <div 
             key={i} 
             className={`memory-card ${card.flipped || card.matched ? 'flipped' : ''}`}
-            onClick={() => flipCard(i)}>{card.front}{card.symbol}
-            
+            onClick={() => flipCard(i)}>{!card.flipped && card.front}{card.flipped && card.symbol}
           </div>;
         })}
 
